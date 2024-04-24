@@ -17,6 +17,6 @@ public class Point3D extends Point2D {
     }
 
     public double distanceFromToPoint() {
-        return Math.sqrt(x * x + y * y + z * z);
+        return Math.sqrt(Math.sqrt(x * x + y * y) + z * z);
     }
 }
