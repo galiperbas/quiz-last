@@ -18,6 +18,6 @@ public class Point3D extends Point2D {
     }
 
     public double distanceSquareFromOrigin() {
-        return super.distanceFromOrigin() + z * z;
+        return Math.sqrt(super.distanceFromOrigin() + z * z);
     }
 }
