@@ -1,4 +1,7 @@
 //question
+/* create a class  for representing points in 3 dimensinoal space by subclassing the Point2D class. Implement the move
+and toString and distanceSquareFromOrigin methods for the new class. Reuse the super classs members. */
+
 public class Point2D {
     protected int x;
     protected int y;
@@ -12,7 +15,7 @@ public class Point2D {
         return "x= " + x + " y= " + y;
     }
 
-    public void moveTo(int deltaX, int deltaY) {
+    public void move(int deltaX, int deltaY) {
         x += deltaX;
         y += deltaY;
     }

@@ -2,21 +2,22 @@
 public class Point3D extends Point2D {
     private int z;
 
-    public Point3D(int z) {
-        super(0, 0); // sanırım doğru
+    public Point3D(int x, int y, int z) {
+        super(x, y);
         this.z = z;
     }
 
+    @Override
     public String toString() {
-        return "x= " + x + " y= " + super.y + "z= " + z; // doesn't matter, super. or not
+        return super.toString() + "z= " + z;
     }
 
-    public void moveTo(int deltaX, int deltaY, int deltaZ) {
-        super.moveTo(1, 1); // important
+    public void move(int deltaX, int deltaY, int deltaZ) {
+        super.move(deltaX, deltaY); // Reuse move method from superclass
         z += deltaZ;
     }
 
-    public double distanceFromToPoint() {
-        return Math.sqrt(x * x + y * y + z * z);
+    public double distanceSquareFromOrigin() {
+        return super.distanceFromOrigin() + z * z;
     }
 }
